@@ -9,6 +9,8 @@ function valuePlanOnInput() {
 	// Put value in a variable
 	sliderPlanValue = sliderPlan
 	console.log("sliderPlanValue", sliderPlanValue)
+
+	return sliderPlanValue
 }
 
 function valueMonthOnInput() {
@@ -19,6 +21,8 @@ function valueMonthOnInput() {
 	// Put value in a variable
 	sliderMonthValue = sliderMonth
 	console.log("sliderMonthValue", sliderMonthValue)
+
+	return sliderMonthValue
 }
 
 function valuePriceOnInput() {
@@ -29,6 +33,8 @@ function valuePriceOnInput() {
 	// Put value in a variable
 	sliderPriceValue = sliderPrice;
 	console.log("sliderPriceValue", sliderPriceValue)
+
+	return sliderPriceValue
 }
 
 function valueFeesOnInput() {
@@ -38,4 +44,22 @@ function valueFeesOnInput() {
 
 	sliderFeeValue = sliderFee;
 	console.log("sliderFeeValue", sliderFeeValue)
+
+	return sliderFeeValue
 }
+
+function calcPercent(sliderPriceValue, sliderFeeValue){
+  return sliderPriceValue * (sliderFeeValue / 100);
+}
+
+
+setTimeout(() => {
+	let planRange = valuePlanOnInput()
+	let planMonth = valueMonthOnInput()
+	let planCalcPercent = calcPercent()
+
+	let calulatePlanForMonth = planRange * planMonth
+
+	console.log("calulatePlanForMonth", calulatePlanForMonth)	
+	console.log("calcPercent", planCalcPercent)	
+}, 500);
