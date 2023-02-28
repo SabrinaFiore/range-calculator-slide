@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rage Calculator Slide</title>
+		<link rel="stylesheet" href="./style.css">
+		<script src="./index.js"></script>
+</head>
+<body>
+    <!-- <h1>Rage Calculator Slide</h1> -->
+		<div class="box">
+			<div class="container">
+				<div class="container-range">
+					<div class="wrapper">
+						<div class="range">
+							<div class="range-title">Piano</div>
+							<div class="range-item">
+								<ul class="range-labels">
+									<li>Base</li>
+									<li>Standard</li>
+									<li>Completo</li>
+								</ul>
+								<div id="selector">
+									<div id="selectPlan" class="select-value">39</div>
+								</div>
+								<input class="input" 
+									type="range" 
+									min="39" 
+									max="199" 
+									value="40" 
+									id="sliderPlan" 
+									oninput="valuePlanOnInput()"
+									step="3">
+							</div>
+						</div>
+						<div class="range">
+							<div class="range-title">Mesi</div>
+              <div class="range-item">
+                <ul class="range-labels">
+                  <li>1</li>
+                  <li>24</li>
+                </ul>
+                <div id="selector">
+                  <div id="selectMonth" class="select-value">1</div>
+                </div>
+                <input class="input" 
+                  type="range" 
+                  min="1" 
+                  max="24" 
+                  value="1" 
+                  id="sliderMonth" 
+                  oninput="valueMonthOnInput()"
+                  >
+              </div>
+						</div>
+						<div class="range">
+							<div class="range-title">Prezzo immobile</div>
+							<div class="range-item">
+								<ul class="range-labels">
+									<li>50.000</li>
+									<li>5.000.000.000</li>
+								</ul>
+								<div id="selectorPrice">
+									<div id="selectPrice" class="select-value">50000</div>
+								</div>
+								<input class="input" 
+								type="range" 
+								min="50000" 
+								max="5000000000" 
+								value="0" 
+								id="sliderPrice" 
+								oninput="valuePriceOnInput()">
+							</div>
+						</div>
+						<div class="range">
+							<div class="range-title">Provvigioni</div>
+							<div class="range-item">
+								<ul class="range-labels">
+									<li>1%</li>
+									<li>2%</li>
+									<li>3%</li>
+									<li>4%</li>
+									<li>5%</li>
+									<li>6%</li>
+								</ul>
+								<div id="selectorFee">
+									<div id="selectFee" class="select-value">1</div>
+								</div>
+								<input class="input" 
+									type="range" 
+									min="1" 
+									max="6" 
+									value="0" 
+									id="sliderFee" 
+									oninput="valueFeesOnInput()"
+									>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container-output">
+					<div class="output" id="output">
+						<div class="output-logo">Logo</div>
+						<div class="output-paragraph">Con Immovare.it più casa, zero pensieri</div>
+						<div class="output-number">€</div>
+						<div class="output-number">RISPARMIATI</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
