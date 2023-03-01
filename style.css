@@ -95,13 +95,19 @@
 }
 
 .output-number, 
-.output-final-discount {
+.output-final-number-discount,
+.output-discount {
 	color: #5fd0df;
 
 	/* ask about font-family */
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 28px;
 	font-weight: 600;
+}
+
+.output-final-number-error {
+	color: red;
+	font-weight: 500;
 }
 
 /* Reset input range's default styling */

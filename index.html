@@ -29,10 +29,10 @@
 									type="range" 
 									min="39" 
 									max="199" 
-									value="40" 
+									value="1"
 									id="planValue" 
 									oninput="calculateDiscount()"
-									step="3">
+									>
 							</div>
 						</div>
 						<div class="range">
@@ -59,17 +59,17 @@
 							<div class="range-title">Prezzo immobile</div>
 							<div class="range-item">
 								<ul class="range-labels">
-									<li>50.000</li>
-									<li>5.000.000.000</li>
+									<li>0</li>
+									<li>150.000</li>
 								</ul>
 								<div id="selectorPrice">
 									<div id="priceAmountHtml" class="select-value">50000</div>
 								</div>
 								<input class="input" 
 								type="range" 
-								min="50000" 
-								max="5000000000" 
-								value="0" 
+								min="1" 
+								max="150000" 
+								value="1" 
 								id="priceAmountValue" 
 								oninput="calculateDiscount()">
 							</div>
@@ -92,7 +92,7 @@
 									type="range" 
 									min="1" 
 									max="6" 
-									value="0" 
+									value="1" 
 									id="percentageFeeValue" 
 									oninput="calculateDiscount()"
 									>
@@ -104,10 +104,14 @@
 					<div class="output" id="output">
 						<div class="output-logo">Logo</div>
 						<div class="output-paragraph">Con Immovare.it più casa, zero pensieri</div>
-						<div class="output-discount">
-              <div class="output-number">€</div>
-              <div class="output-final-discount" id="finalDiscount"></div>
-            </div>
+						<!-- <div class="output-discount"> -->
+              <!-- <div class="output-number">€</div> -->
+              <!-- <span>Moltiplicazione</span><div class="output-final-number-discount" id="calculationPlanForMonth"></div>
+              <span>Percentuale</span><div class="output-final-number-discount" id="percentageCalculator"></div> -->
+              <span>finalDiscount</span><div class="output-final-number-discount" id="finalDiscount"></div>
+
+            <!-- </div> -->
+						<div class="output-discount">RISPARMIATI</div>
 					</div>
 				</div>
 			</div>
