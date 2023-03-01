@@ -1,65 +1,32 @@
-console.log("You are in output function")
+function calculateDiscount() {
+	let planAmount = ''
+	let planValue = document.getElementById("planValue").value;
+	document.getElementById("selectPlanHtml").innerHTML = planValue;
+	planAmount = planValue
 
-function valuePlanOnInput() {
-	var sliderPlanValue = ''
-	let sliderPlan = document.getElementById("sliderPlan").value;
-	// let selector = document.getElementById("selector").value;
-	document.getElementById("selectPlan").innerHTML = sliderPlan;
+	let numberOfMonth = ''
+	let numberOfMonthValue = document.getElementById("numberOfMonthValue").value;
+	document.getElementById("numberOfMonthHtml").innerHTML = numberOfMonthValue;
+	numberOfMonth = numberOfMonthValue
 
-	// Put value in a variable
-	sliderPlanValue = sliderPlan
-	console.log("sliderPlanValue", sliderPlanValue)
+	calculationPlanForMonth = planAmount * numberOfMonth
+	console.log("calculationPlanForMonth", calculationPlanForMonth)
 
-	return sliderPlanValue
+	let priceAmount = ''
+	let priceAmountValue = document.getElementById("priceAmountValue").value;
+	document.getElementById("priceAmountHtml").innerHTML = priceAmountValue;
+	priceAmount = priceAmountValue;
+
+	let percentageFee = ''
+	let percentageFeeValue = document.getElementById("percentageFeeValue").value;
+	document.getElementById("percentageFeeHtml").innerHTML = percentageFeeValue;
+	percentageFee = percentageFeeValue;
+
+	percentageCalculator = ((priceAmount * percentageFeeValue) / 100).toFixed()
+	// console.log("percentageCalculator", percentageCalculator)
+
+	let finalDiscount = percentageCalculator - calculationPlanForMonth;
+	console.log("finalDiscount", finalDiscount)
+
+	document.getElementById("finalDiscount").innerHTML = finalDiscount;
 }
-
-function valueMonthOnInput() {
-	var sliderMonthValue = ''
-	let sliderMonth = document.getElementById("sliderMonth").value;
-	document.getElementById("selectMonth").innerHTML = sliderMonth;
-
-	// Put value in a variable
-	sliderMonthValue = sliderMonth
-	console.log("sliderMonthValue", sliderMonthValue)
-
-	return sliderMonthValue
-}
-
-function valuePriceOnInput() {
-	var sliderPriceValue = ''
-	let sliderPrice = document.getElementById("sliderPrice").value;
-	document.getElementById("selectPrice").innerHTML = sliderPrice;
-
-	// Put value in a variable
-	sliderPriceValue = sliderPrice;
-	console.log("sliderPriceValue", sliderPriceValue)
-
-	return sliderPriceValue
-}
-
-function valueFeesOnInput() {
-	var sliderFeeValue = ''
-	let sliderFee = document.getElementById("sliderFee").value;
-	document.getElementById("selectFee").innerHTML = sliderFee;
-
-	sliderFeeValue = sliderFee;
-	console.log("sliderFeeValue", sliderFeeValue)
-
-	return sliderFeeValue
-}
-
-function calcPercent(sliderPriceValue, sliderFeeValue){
-  return sliderPriceValue * (sliderFeeValue / 100);
-}
-
-
-setTimeout(() => {
-	let planRange = valuePlanOnInput()
-	let planMonth = valueMonthOnInput()
-	let planCalcPercent = calcPercent()
-
-	let calulatePlanForMonth = planRange * planMonth
-
-	console.log("calulatePlanForMonth", calulatePlanForMonth)	
-	console.log("calcPercent", planCalcPercent)	
-}, 500);
