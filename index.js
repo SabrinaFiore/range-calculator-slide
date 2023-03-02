@@ -1,8 +1,21 @@
 function calculateDiscount() {
-	let planAmount = 39
-	let planValue = document.getElementById("planValue").value;
-	document.getElementById("selectPlanHtml").innerHTML = planValue;
-	planAmount = planValue
+	var values = [39,78,199];
+	var inputValue = document.getElementById('planValue'),
+	output = document.getElementById('selectPlanHtml');
+
+	inputValue.oninput = function(){
+		output.innerHTML = values[this.value];
+		return values[this.value]
+	};
+
+	inputValue.oninput();
+	
+	let planAmount = inputValue.oninput();
+	console.log("planAmount", planAmount)
+
+	// let planValue = document.getElementById("planValue").value;
+	// document.getElementById("selectPlanHtml").innerHTML = planValue;
+	// planAmount = planValue
 
 	let numberOfMonth = 1
 	let numberOfMonthValue = document.getElementById("numberOfMonthValue").value;
@@ -30,8 +43,6 @@ function calculateDiscount() {
 	let discount = percentagePositiveVal - calculationPlanForMonth;
 
 	if (isNaN(discount) || discount === undefined) {
-		console.log("isNaN(discount)", isNaN(discount))
-		console.log("discount === undefined", discount === undefined)
 		document.getElementById("finalDiscount").style.display = "none";
 		document.getElementById("output-error").style.display = "block";
 	} else {
