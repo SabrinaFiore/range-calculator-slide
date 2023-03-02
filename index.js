@@ -9,13 +9,7 @@ function calculateDiscount() {
 	};
 
 	inputValue.oninput();
-	
 	let planAmount = inputValue.oninput();
-	console.log("planAmount", planAmount)
-
-	// let planValue = document.getElementById("planValue").value;
-	// document.getElementById("selectPlanHtml").innerHTML = planValue;
-	// planAmount = planValue
 
 	let numberOfMonth = 1
 	let numberOfMonthValue = document.getElementById("numberOfMonthValue").value;
