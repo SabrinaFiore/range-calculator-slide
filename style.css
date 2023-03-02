@@ -102,6 +102,10 @@
 	width: 100%;
 }
 
+.output-logo {
+	width: 300px;
+}
+
 .output-discount {
 	display: flex;
 	justify-content: center;
@@ -111,9 +115,9 @@
 	color: white;
 
 	/* ask about font-family */
-	color: #ede815;
+	color: #515150;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 600;
 }
 
