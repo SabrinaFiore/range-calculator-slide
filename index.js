@@ -20,7 +20,7 @@ function calculateDiscount() {
 
 	let priceAmount = 1
 	let priceAmountValue = document.getElementById("priceAmountValue").value;
-	document.getElementById("priceAmountHtml").innerHTML = priceAmountValue;
+	document.getElementById("priceAmountHtml").innerHTML = priceAmountValue.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
 	priceAmount = priceAmountValue;
 
 	let percentageFee = 0
@@ -42,6 +42,6 @@ function calculateDiscount() {
 	} else {
 		document.getElementById("finalDiscount").style.display = "block";
 		document.getElementById("output-error").style.display = "none";
-		document.getElementById("finalDiscount").innerHTML = "€ " + Math.round(discount * 100) / 1000;
+		document.getElementById("finalDiscount").innerHTML = "€ " + Math.round(discount) + ' (+ iva)';
 	}
 }
