@@ -15,16 +15,18 @@
 				<div class="container-range">
 					<div class="wrapper">
 						<div class="range">
-							<div class="range-title">Piano</div>
+							<div class="range-headings">
+								<div class="range-title">Piano</div>
+								<div id="selector">
+									<div id="selectPlanHtml" class="range-value">39</div>
+								</div>
+							</div>
 							<div class="range-item">
-								<ul class="range-labels">
+								<!-- <ul class="range-labels">
 									<li>Base</li>
 									<li>Standard</li>
 									<li>Completo</li>
-								</ul>
-								<div id="selector">
-									<div id="selectPlanHtml" class="select-value">39</div>
-								</div>
+								</ul> -->
 								<input class="input" 
 									type="range" 
 									min="39" 
@@ -36,19 +38,21 @@
 							</div>
 						</div>
 						<div class="range">
-							<div class="range-title">Mesi</div>
+							<div class="range-headings">
+								<div class="range-title">Mesi</div>
+								<div id="selector">
+									<div id="numberOfMonthHtml" class="range-value">1</div>
+								</div>
+							</div>
               <div class="range-item">
-                <ul class="range-labels">
+                <!-- <ul class="range-labels">
                   <li>1</li>
                   <li>24</li>
-                </ul>
-                <div id="selector">
-                  <div id="numberOfMonthHtml" class="select-value">1</div>
-                </div>
+                </ul> -->
                 <input class="input" 
                   type="range" 
                   min="1" 
-                  max="24" 
+                  max="18" 
                   value="1" 
                   id="numberOfMonthValue" 
                   oninput="calculateDiscount()"
@@ -56,38 +60,42 @@
               </div>
 						</div>
 						<div class="range">
-							<div class="range-title">Prezzo immobile</div>
+							<div class="range-headings">
+								<div class="range-title">Prezzo immobile</div>
+								<div id="selectorPrice">
+									<div id="priceAmountHtml" class="range-value">50</div>
+								</div>
+							</div>
 							<div class="range-item">
-								<ul class="range-labels">
+								<!-- <ul class="range-labels">
 									<li>0</li>
 									<li>150.000</li>
-								</ul>
-								<div id="selectorPrice">
-									<div id="priceAmountHtml" class="select-value">50000</div>
-								</div>
+								</ul> -->
 								<input class="input" 
 								type="range" 
-								min="1" 
-								max="150000" 
+								min="50" 
+								max="3000000" 
 								value="1" 
 								id="priceAmountValue" 
 								oninput="calculateDiscount()">
 							</div>
 						</div>
 						<div class="range">
-							<div class="range-title">Provvigioni</div>
+							<div class="range-headings">
+								<div class="range-title">Provvigioni agenzia tradizionale <span class="range-title-iva">(+ IVA)</span></div>
+								<div id="selectorFee">
+									<div id="percentageFeeHtml" class="range-value">1 <span>%</span></div>
+								</div>
+							</div>
 							<div class="range-item">
-								<ul class="range-labels">
+								<!-- <ul class="range-labels">
 									<li>1%</li>
 									<li>2%</li>
 									<li>3%</li>
 									<li>4%</li>
 									<li>5%</li>
 									<li>6%</li>
-								</ul>
-								<div id="selectorFee">
-									<div id="percentageFeeHtml" class="select-value">1</div>
-								</div>
+								</ul> -->
 								<input class="input" 
 									type="range" 
 									min="1" 
@@ -100,18 +108,18 @@
 						</div>
 					</div>
 				</div>
-				<div class="container-output">
-					<div class="output" id="output">
+				<div class="output">
+					<div class="output-content" id="output">
 						<div class="output-logo">Logo</div>
 						<div class="output-paragraph">Con Immovare.it più casa, zero pensieri</div>
 						<!-- <div class="output-discount"> -->
               <!-- <div class="output-number">€</div> -->
               <!-- <span>Moltiplicazione</span><div class="output-final-number-discount" id="calculationPlanForMonth"></div>
               <span>Percentuale</span><div class="output-final-number-discount" id="percentageCalculator"></div> -->
-              <span>finalDiscount</span><div class="output-final-number-discount" id="finalDiscount"></div>
-
+							<div class="output-discount">RISPARMIATI</div>
+              <div class="output-final-number-discount" id="finalDiscount"></div>
+							<div class="output-error" id="output-error">Inserisci prezzo immobile o provvigioni</div>
             <!-- </div> -->
-						<div class="output-discount">RISPARMIATI</div>
 					</div>
 				</div>
 			</div>
