@@ -1,5 +1,5 @@
 function calculateDiscount() {
-	var values = [39,78,199];
+	var values = [39,89,199];
 	var inputValue = document.getElementById('planValue'),
 	output = document.getElementById('selectPlanHtml');
 

@@ -7,13 +7,19 @@
     box-shadow: rgb(0 0 0 / 5%) -1.25rem 1.25rem 1.25rem;
 	
 	/* to be deleted */
-	position: absolute;
+	/* position: absolute;
 	transform: translate(-50%,-50%);
 	left: 50%;
-	top: 50%;
+	top: 50%; */
 
 	/* ahould be 100% */
 	width: 90%;
+}
+
+@media screen and (max-width: 400px) {
+	.box {
+		display: none;
+	}
 }
 
 .container {
@@ -61,7 +67,7 @@
 	width: 90%;
 
 	color: #515150 !important;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: inherit;
 	font-size: 16px;
 	font-weight: 500;
 }
@@ -77,7 +83,7 @@
 
 	/* ask about font-family */
 	color: #515150 !important;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: inherit;
 	font-size: 21px;
 	font-weight: 500;
 }
@@ -85,7 +91,7 @@
 .range-title-iva {
 	font-size: 0.75rem;
 	color: #515150 !important;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: inherit;
 }
 
 .output {
@@ -116,7 +122,7 @@
 
 	/* ask about font-family */
 	color: #515150;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: inherit;
 	font-size: 20px;
 	font-weight: 600;
 }
@@ -127,14 +133,14 @@
 	color: #5fd0df;
 
 	/* ask about font-family */
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: inherit;
 	font-size: 28px;
 	font-weight: 600;
 }
 
 .output-final-number-discount {
 	/* ask about font-family */
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: inherit;
 	font-size: 3.7rem;
 	font-weight: 600;
 }
@@ -142,7 +148,7 @@
 .output-error {
 	display: none;
 	color: rgb(122, 0, 0);
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: inherit;
 	font-size: 12px;
 	font-weight: 500;
 }
